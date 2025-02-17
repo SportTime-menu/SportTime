@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SportTime</title>
+    <link rel="stylesheet" href="styles1.css" />
+    <link rel="icon" href="header/favicon.png" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="header/favicon.png" />
+  </head>
+  <body>
+    <!-- Хедер -->
+    <header class="header">
+      <div class="header-container">
+        <div class="header__row">
+          <a href="index.html">
+            <img src="header/logotypSportTime.jpg" alt="Логотип" class="logo"
+          /></a>
+
+          <div class="restaurant-details">
+            <h1>SportTime</h1>
+            <p>RESTAURANT</p>
+          </div>
+          <div class="search-container">
+            <input
+              type="text"
+              placeholder="Знайти страву..."
+              id="searchInput"
+            />
+            <button type="button" onclick="searchDish()">
+              <img src="header/лупа.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="navigation">
+      <ul>
+        <li><a href="#gorilka">Горілка</a></li>
+        <li><a href="#kon">Коньяк</a></li>
+        <li><a href="#viski">Віскі</a></li>
+        <li><a href="#tekila">Текіла</a></li>
+        <li><a href="#rom">Ром</a></li>
+        <li><a href="#nast">Настоянки</a></li>
+        <li><a href="#likers">Лікери</a></li>
+        <li><a href="#vermut">Вермути</a></li>
+        <li><a href="#jun">Джин</a></li>
+        <li><a href="#igrvine">Ігристі вина</a></li>
+        <li><a href="#vine">Вина</a></li>
+        <li><a href="#beer">Пиво</a></li>
+        <li><a href="#shot">Шоти</a></li>
+        <li><a href="#long">Лонги</a></li>
+      </ul>
+    </nav>
+    <!-- Заголовок сторінки -->
+    <section id="gorilka" class="section-title">
+      <h2>Горілка</h2>
+    </section>
+    <section class="dishes">
+      <div class="dish-card">
+        <img src="bar/штоф.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Неміров Штоф <span>500ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">25 / 50 / 250 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Неміров Де Люкс <span>500ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">40 / 80 / 400 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Absolut <span>500ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">60 / 120 / 600 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Grey Goose <span>500ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">110 / 220 / 2200 UAH</p>
+      </div>
+    </section>
+    <section id="kon" class="section-title">
+      <h2>Коньяк</h2>
+    </section>
+    <section class="dishes">
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Закарпатський 4 зірки <span>500ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">50 / 100 / 500 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Sarajishvili 3 зірки <span>500ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">65 / 130 / 650 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Hennessy <span>500ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">240 / 480 / 3360 UAH</p>
+      </div>
+    </section>
+    <section id="viski" class="section-title">
+      <h2>Віскі</h2>
+    </section>
+    <section class="dishes">
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Jameson <span>700ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">100 / 200 / 1400 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Jack Daniels <span>700ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">100 / 200 / 1400 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Jack Daniels Tennessee Honey <span>700ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">110 / 220 / 1540 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Shivas Regal 12 років <span>700ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">160 / 320 / 2240 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Glenmorangie Original <span>700ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">270 / 540 / 3780 UAH</p>
+      </div>
+    </section>
+    <section id="tekila" class="section-title">
+      <h2>Текіла</h2>
+    </section>
+    <section class="dishes">
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Olmeca Blanco <span>700ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">100 / 200 / 1400 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Don Diego Silver <span>700ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">80 / 160 / 1120 UAH</p>
+      </div>
+    </section>
+    <section id="rom" class="section-title">
+      <h2>Ром</h2>
+    </section>
+    <section class="dishes">
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Bacardi Carta Blanca <span>1 L</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">60 / 120 / 10 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Bacardi Oakheart Original <span>1 L</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">60 / 120 / 1200 UAH</p>
+      </div>
+    </section>
+    <section id="nast" class="section-title">
+      <h2>Настоянки</h2>
+    </section>
+    <section class="dishes">
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Becherovka <span>700ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">70 / 140 / 980 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Xenta Absenta <span>500ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">160 / 320 / 2240 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Jagermeister <span>700ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">70 / 140 / 980 UAH</p>
+      </div>
+    </section>
+    <section id="likers" class="section-title">
+      <h2>Лікери</h2>
+    </section>
+    <section class="dishes">
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3><span>700ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">70 / 140 / 980 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Jagermeister <span>700ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">70 / 140 / 980 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Jagermeister <span>700ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">70 / 140 / 980 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Jagermeister <span>700ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">70 / 140 / 980 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Jagermeister <span>700ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">70 / 140 / 980 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="/" alt="" />
+        <div class="dish-info">
+          <h3>Jagermeister <span>700ml</span></h3>
+          <p class="dish-description">50 мл / 100 мл / 1 бут.</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">70 / 140 / 980 UAH</p>
+      </div>
+    </section>
+    <section id="vermut" class="section-title">
+      <h2>Вермути</h2>
+    </section>
+    <section class="dishes">
+      <div class="dish-card">
+        <img
+          src="/Снимок экрана 2025-01-22 003702.png"
+          alt="Форшмак із копченої макрелі"
+        />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img
+          src="/Снимок экрана 2025-01-22 003702.png"
+          alt="Форшмак із копченої макрелі"
+        />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+    </section>
+    <section id="jun" class="section-title">
+      <h2>Джин</h2>
+    </section>
+    <section class="dishes">
+      <div class="dish-card">
+        <img
+          src="/Снимок экрана 2025-01-22 003702.png"
+          alt="Форшмак із копченої макрелі"
+        />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+    </section>
+    <section id="igrvine" class="section-title">
+      <h2>Ігристі вина</h2>
+    </section>
+    <section class="dishes">
+      <div class="dish-card">
+        <img
+          src="/Снимок экрана 2025-01-22 003702.png"
+          alt="Форшмак із копченої макрелі"
+        />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img
+          src="/Снимок экрана 2025-01-22 003702.png"
+          alt="Форшмак із копченої макрелі"
+        />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img
+          src="/Снимок экрана 2025-01-22 003702.png"
+          alt="Форшмак із копченої макрелі"
+        />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+    </section>
+    <section id="vine" class="section-title">
+      <h2>Вина</h2>
+    </section>
+    <section class="dishes">
+      <div class="dish-card">
+        <img
+          src="/Снимок экрана 2025-01-22 003702.png"
+          alt="Форшмак із копченої макрелі"
+        />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img
+          src="/Снимок экрана 2025-01-22 003702.png"
+          alt="Форшмак із копченої макрелі"
+        />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img
+          src="/Снимок экрана 2025-01-22 003702.png"
+          alt="Форшмак із копченої макрелі"
+        />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img
+          src="/Снимок экрана 2025-01-22 003702.png"
+          alt="Форшмак із копченої макрелі"
+        />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img
+          src="/Снимок экрана 2025-01-22 003702.png"
+          alt="Форшмак із копченої макрелі"
+        />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img
+          src="/Снимок экрана 2025-01-22 003702.png"
+          alt="Форшмак із копченої макрелі"
+        />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img
+          src="/Снимок экрана 2025-01-22 003702.png"
+          alt="Форшмак із копченої макрелі"
+        />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img
+          src="/Снимок экрана 2025-01-22 003702.png"
+          alt="Форшмак із копченої макрелі"
+        />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img
+          src="/Снимок экрана 2025-01-22 003702.png"
+          alt="Форшмак із копченої макрелі"
+        />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img
+          src="/Снимок экрана 2025-01-22 003702.png"
+          alt="Форшмак із копченої макрелі"
+        />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+    </section>
+    <section id="beer" class="section-title">
+      <h2>Пиво</h2>
+    </section>
+    <section class="dishes">
+      <div class="dish-card">
+        <img
+          src="/Снимок экрана 2025-01-22 003702.png"
+          alt="Форшмак із копченої макрелі"
+        />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img
+          src="/Снимок экрана 2025-01-22 003702.png"
+          alt="Форшмак із копченої макрелі"
+        />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img
+          src="/Снимок экрана 2025-01-22 003702.png"
+          alt="Форшмак із копченої макрелі"
+        />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="bar/коктель.jpg" alt="Форшмак із копченої макрелі" />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img
+          src="/Снимок экрана 2025-01-22 003702.png"
+          alt="Форшмак із копченої макрелі"
+        />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="bar/коктель.jpg" alt="Форшмак із копченої макрелі" />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="bar/коктель.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Рулетики з лосося та крем-сиром</h3>
+          <p class="dish-description">Огірок, крем-сир, лосось</p>
+          <p class="dish-descriptiong">165 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+    </section>
+    <section id="shot" class="section-title">
+      <h2>Шоти</h2>
+    </section>
+    <section class="dishes">
+      <div class="dish-card">
+        <img src="bar/ШотВорд.png" alt="" />
+        <div class="dish-info">
+          <h3>Хіросіма</h3>
+          <p class="dish-description">Самбука, бейліс, абсент, гренадін</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">150 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="bar/ШотВорд.png" alt="" />
+        <div class="dish-info">
+          <h3>Угольок</h3>
+          <p class="dish-description">Калуа, самбука, абсент</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">150 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="bar/ШотВорд.png" alt="" />
+        <div class="dish-info">
+          <h3>Зелений мексиканець</h3>
+          <p class="dish-description">Лікер Пізан, лимонний сік, текіла</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">80 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="bar/ШотВорд.png" alt="" />
+        <div class="dish-info">
+          <h3>БМВ</h3>
+          <p class="dish-description">Бейліс, малібу, віскі</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">130 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="bar/ШотВорд.png" alt="" />
+        <div class="dish-info">
+          <h3>ТУ-134</h3>
+          <p class="dish-description">Калуа, бейліс, абсент</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">160 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="bar/ШотВорд.png" alt="" />
+        <div class="dish-info">
+          <h3>5 Елемент</h3>
+          <p class="dish-description">Блю кюрасао, самбука, абсент</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">130 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="bar/ШотВорд.png" alt="" />
+        <div class="dish-info">
+          <h3>Б-52</h3>
+          <p class="dish-description">Бейліс, калуа, куантро</p>
+          <p class="dish-descriptiong"><span>.</span></p>
+        </div>
+        <p class="dish-price">130 UAH</p>
+      </div>
+    </section>
+    <section id="long" class="section-title">
+      <h2>Лонги</h2>
+    </section>
+    <section class="dishes">
+      <div class="dish-card">
+        <img src="bar/коктель.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Маргарита</h3>
+          <p class="dish-description">Текіла, куантро, лимонний сік</p>
+          <p class="dish-descriptiong">150 ml</p>
+        </div>
+        <p class="dish-price">135 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="bar/коктель.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Малибу</h3>
+          <p class="dish-description">
+            Малібу, ром, ананасовий сік, апельсиновий сік
+          </p>
+          <p class="dish-descriptiong">200 ml</p>
+        </div>
+        <p class="dish-price">110 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="bar/коктель.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Текіла сієра</h3>
+          <p class="dish-description">
+            Ликер Пізан, апельсиновий сік, текіла, гренадін
+          </p>
+          <p class="dish-descriptiong">200 ml</p>
+        </div>
+        <p class="dish-price">110 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="bar/коктель.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Джангл джус</h3>
+          <p class="dish-description">
+            Текіла, сік манго, лимонний сік, гренадін
+          </p>
+          <p class="dish-descriptiong">200 ml</p>
+        </div>
+        <p class="dish-price">100 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="bar/коктель.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Піна Колада</h3>
+          <p class="dish-description">Піна колада, ром, ананасовий сік</p>
+          <p class="dish-descriptiong">150 ml</p>
+        </div>
+        <p class="dish-price">105 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="bar/коктель.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Голуба лагуна</h3>
+          <p class="dish-description">
+            Мартіні, блю кюрасао, водка, лимонний сік/спрайт
+          </p>
+          <p class="dish-descriptiong">175 ml</p>
+        </div>
+        <p class="dish-price">125 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="bar/коктель.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Мохіто</h3>
+          <p class="dish-description">Ром, лайм, м'ята, спрайт</p>
+          <p class="dish-descriptiong">175 ml</p>
+        </div>
+        <p class="dish-price">125 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="bar/коктель.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Апероль Шприц</h3>
+          <p class="dish-description"><span>.</span></p>
+          <p class="dish-descriptiong">250 ml</p>
+        </div>
+        <p class="dish-price">225 UAH</p>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>

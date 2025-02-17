@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SportTime</title>
+    <link rel="stylesheet" href="styles1.css" />
+    <link rel="icon" href="header/favicon.png" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="header/favicon.png" />
+  </head>
+  <body>
+    <!-- Хедер -->
+    <header class="header">
+      <div class="header-container">
+        <div class="header__row">
+          <a href="index.html">
+            <img src="/header/logotypSportTime.jpg" alt="Логотип" class="logo"
+          /></a>
+
+          <div class="restaurant-details">
+            <h1>SportTime</h1>
+            <p>RESTAURANT</p>
+          </div>
+          <div class="search-container">
+            <input
+              type="text"
+              placeholder="Знайти страву..."
+              id="searchInput"
+            />
+            <button type="button" onclick="searchDish()">
+              <img src="header/лупа.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="navigation">
+      <ul>
+        <li><a href="#gril">Гриль меню</a></li>
+        <li><a href="#fish">М'ясні та рибні страви</a></li>
+        <li><a href="#garnir">Гарніри</a></li>
+        <li><a href="#zakysk">Закуски</a></li>
+        <li><a href="#varenu">Вареники</a></li>
+      </ul>
+    </nav>
+    <!-- Заголовок сторінки -->
+    <section id="gril" class="section-title">
+      <h2>Гриль меню</h2>
+    </section>
+    <section class="dishes">
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Шашлик зі свинини</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">150/50 г</p>
+        </div>
+        <p class="dish-price">145 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Шашлик із телятини</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">150 г</p>
+        </div>
+        <p class="dish-price">195 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Ребра свинини</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">150/50 г</p>
+        </div>
+        <p class="dish-price">130 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Люля-кебаб із курки</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">100 г</p>
+        </div>
+        <p class="dish-price">90 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Люля-кебаб із телятини</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">100 г</p>
+        </div>
+        <p class="dish-price">145 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Перепілка</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">115 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Стейк із сома</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">150 г</p>
+        </div>
+        <p class="dish-price">200 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Скумбрія</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">100/50 г</p>
+        </div>
+        <p class="dish-price">145 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Закуска з лаваша</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">100 г</p>
+        </div>
+        <p class="dish-price">65 UAH</p>
+      </div>
+    </section>
+    <section id="fish" class="section-title">
+      <h2>М'ясні та рибні страви</h2>
+    </section>
+    <section class="dishes">
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Рулька свиняча запечена</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">100 г</p>
+        </div>
+        <p class="dish-price">50 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Ребра яловичі запечені</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1200 г</p>
+        </div>
+        <p class="dish-price">950 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Ребра свинячі запечені</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1200 г</p>
+        </div>
+        <p class="dish-price">950 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Качка запечена з фруктами</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">100 г</p>
+        </div>
+        <p class="dish-price">50 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Курка запечена з апельсинами</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">100 г</p>
+        </div>
+        <p class="dish-price">45 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>
+            Риба фарширована<br />
+            щука / судак / короп
+          </h3>
+          <p class="dish-description"></p>
+          <p class="dish-descriptiong">100 г</p>
+        </div>
+        <p class="dish-price">45 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Класичний печінковий торт</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">100 г</p>
+        </div>
+        <p class="dish-price">55 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Терин із курячої печінки з карамелізованою хурмою / яблуком</h3>
+          <p class="dish-description"></p>
+          <p class="dish-descriptiong">50/50 г</p>
+        </div>
+        <p class="dish-price">45 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Холодне з язика</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">250 г</p>
+        </div>
+        <p class="dish-price">125 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>
+            Ковбаса домашня<br />куряча / куряча з грибами / свиняча / яловича
+          </h3>
+          <p class="dish-description"></p>
+          <p class="dish-descriptiong">100 г</p>
+        </div>
+        <p class="dish-price">65 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Голубці фаршировані</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">200 г</p>
+        </div>
+        <p class="dish-price">95 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Рулетики зі свинини з вершковим соусом</h3>
+          <p class="dish-description"></p>
+          <p class="dish-descriptiong">150/30 г</p>
+        </div>
+        <p class="dish-price">90 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Ребра яловичі у винному соусі</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">300 г</p>
+        </div>
+        <p class="dish-price">1300 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Котлета по-київськи</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">150 г</p>
+        </div>
+        <p class="dish-price">125 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Курячі рулетики з грибами та сиром</h3>
+          <p class="dish-description"></p>
+          <p class="dish-descriptiong">100 г</p>
+        </div>
+        <p class="dish-price">125 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Міні-рулетики по-тайськи</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">500 г</p>
+        </div>
+        <p class="dish-price">180 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Суфле з судака</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">130/70 г</p>
+        </div>
+        <p class="dish-price">220 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Телятина Велінгтон</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">200 г</p>
+        </div>
+        <p class="dish-price">290 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Свинина з грибним Дюкселем</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">200 г</p>
+        </div>
+        <p class="dish-price">240 UAH</p>
+      </div>
+    </section>
+    <section id="garnir" class="section-title">
+      <h2>Гарніри</h2>
+    </section>
+    <section class="dishes">
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Картопля Гратен із соусом "Бешамель"</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">100/50 г</p>
+        </div>
+        <p class="dish-price">95 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Тушкована картопля з м'ясом</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">300 г</p>
+        </div>
+        <p class="dish-price">95 UAH</p>
+      </div>
+    </section>
+    <section id="zakysk" class="section-title">
+      <h2>Закуски</h2>
+    </section>
+    <section class="dishes">
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Брускета з сьомгою</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">65 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Брускета з оселедцем</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">65 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Брускета з авокадо</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">65 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Брускета з ростбіфом</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">65 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Брускета з копченою качкою</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">65 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Брускета з язиком</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">65 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Брускета з крем-сиром та чері</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">65 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Млинці з м'ясом</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">100/30 г</p>
+        </div>
+        <p class="dish-price">55 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Млинці з грибами</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">100/30 г</p>
+        </div>
+        <p class="dish-price">55 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Пиріжки листкові з м'ясом</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">35 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Пиріжки листкові з капустою</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">35 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Тарталетки з мусом із сьомги</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">25 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Тарталетки з салатом</h3>
+          <p class="dish-description">Курячий, олів'є</p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">25 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Моцарела в оболонці</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">30 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Мус із сиром дор-блю з хамоном</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">30 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Мус із авокадо з креветками</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">35 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Канапе</h3>
+          <p class="dish-description">балик, сир, маслина</p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">20 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Канапе</h3>
+          <p class="dish-description">сир, маслина, виноград</p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">20 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Канапе</h3>
+          <p class="dish-description">сьомга с/с, маслина</p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">30 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Канапе</h3>
+          <p class="dish-description">моцарелла, помідори чері</p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">25 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Сом на шпажках</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">85 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Сьомга на шпажках</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">125 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Шашлик курячий на шпажках</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">60 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Шашлик свинячий на шпажках</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">75 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Паштет у журавлинній оболонці</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">35 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Сирний пиріг</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">25 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Пампушки з часником</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">2 шт.</p>
+        </div>
+        <p class="dish-price">10 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Асорті з паштетів</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">4 шт.</p>
+        </div>
+        <p class="dish-price">160 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Кіш з куркою та броколі</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">1 шт.</p>
+        </div>
+        <p class="dish-price">76 UAH</p>
+      </div>
+    </section>
+    <section id="varenu" class="section-title">
+      <h2>Вареники</h2>
+    </section>
+    <section class="dishes">
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Вареники з картоплею</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">200/30 г</p>
+        </div>
+        <p class="dish-price">95 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Вареники з капустою</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">200/30 г</p>
+        </div>
+        <p class="dish-price">95 UAH</p>
+      </div>
+      <div class="dish-card">
+        <img src="food/блюдо.jpg" alt="" />
+        <div class="dish-info">
+          <h3>Пельмені</h3>
+          <p class="dish-description"><span>Lorem, ipsum dolor.</span></p>
+          <p class="dish-descriptiong">200/30 г</p>
+        </div>
+        <p class="dish-price">75 UAH</p>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
