@@ -1,0 +1,424 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+/* Загальні стилі */
+body {
+  margin: 0;
+  width: 100%;
+  /* overflow-x: hidden; */
+  padding: 0;
+  font-family: "Merriweather", serif;
+  background-color: #c4b6ab; /* М'який фон */
+  color: #fff2df; /* Світлий текст */
+}
+.container {
+  /* width: 100%; */
+  max-width: 1300px; /* Адаптивний ліміт */
+  margin: 0 auto; /* Центрує контент */
+  padding: 0 15px; /* Додає відступи */
+  box-sizing: border-box; /* Враховує padding у розрахунку ширини */
+}
+/* Хедер */
+.header {
+  background-color: #796254; /* М'який коричневий тон */
+  padding: 10px 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  height: 90px;
+  position: relative; /* Встановлюємо відносне позиціонування */
+  z-index: 1000; /* Робимо, щоб він був над іншими елементами */
+}
+
+.header-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.header__row {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.restaurant-details h1 {
+  margin: 5px 0 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #eaddd3;
+}
+
+.restaurant-details p {
+  margin: 10px 0px 0;
+  color: #eaddd3;
+  font-size: 14px;
+}
+/* Контейнер пошуку */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Розміщуємо справа */
+  flex-grow: 1; /* Дозволяємо займати вільне місце */
+  padding-left: 0; /* Забираємо жорстке зміщення */
+}
+
+.search-container input {
+  padding: 8px 15px;
+  font-size: 14px;
+  border: 1px solid #eaddd3; /* Золотистий відтінок */
+  border-radius: 20px;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-container input:focus {
+  box-shadow: 0px 0px 8px rgba(86, 34, 170, 0.5);
+}
+
+.search-container button {
+  padding: 8px 15px;
+  margin-left: 5px;
+  background-color: #eaddd3; /* Золотистий */
+  color: #eaddd3;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+  background-color: #796254; /* Трохи темніший відтінок */
+}
+
+/* Заголовок сторінки */
+.section-title {
+  text-align: center;
+  margin: 20px 0;
+  position: relative; /* Додаємо відносне позиціонування */
+  padding-top: 50px; /* Відступ зверху для секції */
+  margin-top: -50px; /* Нівелюємо зміщення */
+}
+
+.section-title h2 {
+  font-size: 32px;
+  color: #000000; /* М'який темний відтінок */
+}
+
+/* Загальний стиль для навігаційного меню */
+.navigation {
+  background-color: #2d1e17;
+  color: white;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navigation ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  position: relative;
+  margin: 0;
+  padding: 0 5px; /* Відступи між пунктами */
+  display: flex;
+  align-items: center;
+}
+
+/* Додаємо вертикальну риску */
+.navigation li:not(:last-child)::after {
+  content: "|"; /* Символ палочки */
+  color: #eaddd3; /* Колір риски */
+  margin-left: 10px; /* Відступ від тексту */
+  font-size: 20px; /* Розмір риски */
+}
+
+/* Стилі посилань */
+.navigation a {
+  color: #eaddd3; /* Колір тексту */
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.navigation a:hover {
+  color: #9d8a7c; /* Колір при наведенні */
+  /* text-decoration: underline; */
+}
+.back-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px; /* Розмір кружечка */
+  height: 30px;
+  color: #eaddd3; /* Колір стрілки */
+  text-decoration: none;
+  font-size: 30px; /* Розмір стрілки */
+  font-weight: bold;
+  border-radius: 50%; /* Робимо круглим */
+  border: 2px solid #eaddd3; /* Окантовка кружечка */
+}
+
+.back-arrow:hover {
+  background-color: #665a51; /* Легка заливка при наведенні */
+}
+/* Карточки страв */
+.dishes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+  padding: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.dish-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: left;
+  height: 370px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.dish-card:hover {
+  transform: translateY(-10px); /* Піднімаємо картку вгору */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Збільшуємо тінь */
+}
+.dish-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.dish-info {
+  padding: 15px;
+  flex-grow: 1;
+}
+
+.dish-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: #333;
+}
+.dish-info span {
+  font-size: 14px;
+}
+.dish-description {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+.dish-description span {
+  font-size: 14px;
+  color: transparent;
+  margin: 5px 0;
+}
+.dish-descriptiong {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+.dish-descriptiong span {
+  font-size: 14px;
+  color: transparent;
+  margin: 5px 0;
+}
+.dish-price {
+  font-size: 16px;
+  color: #987185;
+  font-weight: bold;
+  text-align: right;
+  margin: -10px 25px;
+}
+@media (max-width: 1450px) {
+  .navigation ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* Для екранів до 786px (планшети) */
+@media (max-width: 786px) {
+  .header {
+    padding: 10px 50px;
+    height: auto;
+  }
+  .logo {
+    margin: 0px;
+  }
+  .restaurant-details p {
+    text-align: center;
+  }
+  .header__row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .search-container {
+    justify-content: center; /* Центруємо поле пошуку */
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .dishes {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .dish-card {
+    height: 300px;
+    width: 220px;
+  }
+
+  .dish-card img {
+    height: 180px;
+  }
+
+  .dish-info {
+    padding: 10px;
+  }
+
+  .dish-info h3 {
+    font-size: 16px;
+  }
+
+  .dish-price {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+}
+
+/* Для екранів до 576px (маленькі планшети, великі телефони) */
+@media (max-width: 576px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+
+  .search-container {
+    width: 100%;
+    justify-content: center;
+    padding-left: 0;
+  }
+  .section-title h2 {
+    margin-top: 60px;
+  }
+  .dishes {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    display: flex;
+    justify-content: center; /* Центруємо картки */
+    align-items: center;
+    flex-wrap: wrap; /* Щоб не ламався рядок */
+  }
+  .dish-card {
+    height: 300px;
+    width: 220px;
+  }
+  .dish-card img {
+    height: 180px;
+  }
+
+  .dish-info h3 {
+    font-size: 15px;
+  }
+
+  .dish-description {
+    font-size: 12px;
+  }
+}
+
+/* Для екранів до 480px (телефони) */
+@media (max-width: 480px) {
+  .navigation ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .dishes {
+    grid-template-columns: 1fr; /* Одна колонка */
+    display: flex;
+    justify-content: center; /* Центруємо картки */
+    align-items: center;
+    flex-wrap: wrap; /* Щоб не ламався рядок */
+  }
+  .dish-card {
+    height: 370px;
+    width: 500px;
+    margin: 10px;
+  }
+  .dish-card img {
+    height: 250px;
+  }
+
+  .dish-info {
+    padding: 8px;
+  }
+
+  .dish-info h3 {
+    font-size: 14px;
+  }
+
+  .dish-description {
+    font-size: 12px;
+  }
+
+  .dish-price {
+    font-size: 13px;
+  }
+}
+
+/* Для екранів до 400px (дуже маленькі телефони) */
+@media (max-width: 400px) {
+  .header {
+    padding: 10px;
+  }
+  .navigation ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .search-container input {
+    width: 80%;
+  }
+  .section-title h2 {
+    margin-top: 80px;
+  }
+  .dishes {
+    grid-template-columns: 1fr; /* Одна колонка */
+  }
+  .dish-card {
+    height: 370px;
+    width: 500px;
+    margin: 10px;
+  }
+  .dish-card img {
+    height: 250px;
+  }
+
+  .dish-info {
+    padding: 5px;
+  }
+
+  .dish-info h3 {
+    font-size: 13px;
+  }
+
+  .dish-description {
+    font-size: 12px;
+  }
+
+  .dish-price {
+    font-size: 13px;
+  }
+}
