@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    
+    <link rel="stylesheet" href="mobile-nav.css" />
+    <link rel="icon" href="header/favicon.png" type="image/svg+xml" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" href="header/favicon.png" />
+    <title>SportTime</title>
+    <style>
+      /* Приховати скролбар для ПК-версії */
+      @media (min-width: 900px) {
+        html::-webkit-scrollbar,
+        body::-webkit-scrollbar {
+          width: 0 !important;
+          background: transparent !important;
+        }
+        html,
+        body {
+          scrollbar-width: none !important; /* Firefox */
+          -ms-overflow-style: none !important; /* IE 10+ */
+        }
+      }
+      @media (min-width: 900px) {
+    #mainNav {
+      background: transparent;
+      transition: background 0.1s;
+    }
+    #mainNav.scrolled {
+      background: #111;
+    }
+  }
+    </style>
+  </head>
+  <body class="index-main">
+    <!-- Мобільна верхня панель -->
+    <div class="mobile-top-bar">
+      <img src="header/logotypSportTime.jpg" alt="Логотип" class="mobile-logo" />
+      <div class="mobile-title-block">
+        <span class="mobile-title">SportTime</span>
+        <span class="mobile-subtitle">RESTAURANT</span>
+      </div>
+      <span class="mobile-decor"></span>
+    </div>
+    <!-- Інформація про ресторан -->
+<div class="main-nav" id="mainNav">
+      <div class="main-nav-left">
+        <div class="main-nav-logo-title">
+          <img src="header/logotypSportTime.jpg" alt="Логотип" class="logo" style="margin-right: 18px; vertical-align: middle;" />
+          <div class="main-nav-title-block">
+            <span class="main-nav-title">SportTime</span>
+            <span class="main-nav-subtitle">RESTAURANT</span>
+          </div>
+        </div>
+        <!-- Навігація під назвою сайту -->
+        <div class="main-nav-links-under">
+          <a href="index.html" class="main-nav-link">Головна</a>
+          <a href="index2.html" class="main-nav-link">Меню</a>
+          <a href="#" class="main-nav-link" style="pointer-events: none; opacity: 1;">Про нас</a>
+        </div>
+      </div>
+
+    </div>
+    <!-- Mobile bottom navigation -->
+    <nav class="mobile-bottom-nav">
+      <a href="index.html" id="nav-home" class="active">
+        <img src="header/home.svg" alt="Головна" />
+        Головна
+      </a>
+      <a href="index2.html" id="nav-menu">
+        <img src="header/menu.svg" alt="Меню" />
+        Меню
+      </a>
+      <a href="#" id="nav-about" style="pointer-events: none; opacity: 0.6;">
+        <img src="header/info.png" alt="Про нас" />
+        Про нас
+      </a>
+    </nav>
+    <!-- Хедер -->
+    <div class="header">
+      <div class="header-bg"></div>
+      <div class="header-title">
+        <h1>SportTime</h1>
+        <p>RESTAURANT</p>
+        <div class="center-menu-btn-section">
+          <a href="index2.html" class="center-menu-btn">МЕНЮ</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Основний контент -->
+    <div class="container">
+      <div class="content">
+        <!-- Секція меню видалена -->
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-section contact-info">
+          <h3>Контактні дані</h3>
+          <p><strong>Адреса:</strong>Олександрія, вулиця Шевченка, 58Б, E584</p>
+          <p><strong>Телефон:</strong> <a href="tel:+380969883869">+380933339733</a></p>
+        </div>
+        <div class="footer-section social">
+          <h3>Ми в соцмережах</h3>
+          <p>
+                <a
+                  href="https://www.instagram.com/restaurant_sporttime/"
+                  target="_blank"
+                  class="insta"
+                >
+                  <img src="header/insta.png" alt="Instagram" /> Instagram
+                </a>
+              </p>
+        </div>
+        <div class="footer-section working-hours">
+          <h3>Робочий час</h3>
+          <table>
+            <tr data-day="1"><td>Понеділок</td><td>10:00 - 22:00</td></tr>
+            <tr data-day="2"><td>Вівторок</td><td>10:00 - 22:00</td></tr>
+            <tr data-day="3"><td>Середа</td><td>10:00 - 22:00</td></tr>
+            <tr data-day="4"><td>Четвер</td><td>10:00 - 22:00</td></tr>
+            <tr data-day="5"><td>П’ятниця</td><td>10:00 - 22:00</td></tr>
+            <tr data-day="6"><td>Субота</td><td>10:00 - 22:00</td></tr>
+            <tr data-day="0"><td>Неділя</td><td>10:00 - 22:00</td></tr>
+          </table>
+        </div>
+        <div class="footer-section map">
+          <h3>На карті</h3>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2637.2266353211076!2d33.104961!3d48.6752422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d09d8d7a3a8fc3%3A0xba04a97a5c9f5a32!2z0KHQtdC80L3QsCDQstGD0LvQvtCy!5e0!3m2!1suk!2sua!4v1720199800000!5m2!1suk!2sua" 
+            width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 SportTime.RESTAURANT</p>
+        <div class="links">
+          <a href="#">Політика використання файлів cookie</a>
+          <a href="#">Умови користування</a>
+          <a href="#">Політика конфіденційності</a>
+        </div>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+    <script>
+  // Зміна фону навігації при скролі для ПК-версії
+  document.addEventListener('DOMContentLoaded', function() {
+    const nav = document.getElementById('mainNav');
+    function onScroll() {
+      if (window.innerWidth >= 900) {
+        if (window.scrollY > 10) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }
+    window.addEventListener('scroll', onScroll);
+    window.addEventListener('resize', onScroll);
+    onScroll();
+  });
+</script>
+  </body>
+</html>
