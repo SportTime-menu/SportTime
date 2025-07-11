@@ -1,0 +1,1768 @@
+html {
+  scroll-behavior: smooth;
+
+}
+/* Загальні стилі */
+body {
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  font-family: "Merriweather", serif;
+  background-color: #2d2a26; /* Сіро-бежевий фон */
+  color: #fff;
+}
+#mainContent {
+  overflow-y: auto;
+  max-height: 100vh;
+  scroll-behavior: auto;
+  position: relative;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+#mainContent::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+.container {
+  /* width: 100%; */
+  max-width: 1300px; /* Адаптивний ліміт */
+  margin: 0 auto; /* Центрує контент */
+  padding: 0 15px; /* Додає відступи */
+  box-sizing: border-box; /* Враховує padding у розрахунку ширини */
+}
+/* Хедер */
+.header {
+  padding: 10px 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  height: 90px;
+  position: relative; /* Встановлюємо відносне позиціонування */
+  z-index: 1000; /* Робимо, щоб він був над іншими елементами */
+}
+
+.header-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.header__row {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.restaurant-details h1 {
+  margin: 5px 0 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #23272f;
+}
+
+.restaurant-details p {
+  margin: 10px 0px 0;
+  color: #fff;
+  font-size: 14px;
+}
+/* Контейнер пошуку */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Розміщуємо справа */
+  flex-grow: 1; /* Дозволяємо займати вільне місце */
+  padding-left: 0; /* Забираємо жорстке зміщення */
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.search-container input {
+  margin-top: 10px;
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #ffffff !important;
+  background: #111111 !important;
+  border: 2px solid #333333;
+  border-radius: 8px;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+  min-width: 150px !important;
+  max-width: 320px;
+}
+
+.search-container input:focus {
+  box-shadow: 0px 0px 4px rgba(94, 94, 94, 0.5);
+}
+
+.search-container button {
+  margin-right: 305px !important;
+  padding: 12px 20px;
+  margin-top: 10px;
+  margin-left: 15px;
+  font-size: 20px;
+  background-color: #636363; /* Золотистий */
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+  background-color: #8d8d8d; /* Трохи темніший відтінок */
+}
+
+/* Заголовок сторінки */
+.section-title {
+  text-align: center;
+  margin: 20px 0;
+  position: relative; /* Додаємо відносне позиціонування */
+  padding-top: 50px; /* Відступ зверху для секції */
+  margin-top: -50px; /* Нівелюємо зміщення */
+}
+
+.section-title h2 {
+  font-size: 16px !important;
+  color: #000000; /* М'який темний відтінок */
+}
+
+/* Загальний стиль для навігаційного меню */
+.navigation {
+  background-color: #111111 !important;
+  color: #ffffff;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navigation ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  position: relative;
+  margin: 0;
+  padding: 0 5px; /* Відступи між пунктами */
+  display: flex;
+  align-items: center;
+}
+
+/* Стилі посилань */
+.navigation a {
+  color: #966f54;
+  /* Колір тексту */
+  text-decoration: none;
+  font-size: 14px;
+
+}
+
+.navigation a:hover {
+  color: #bfa16a;
+}
+
+/* Карточки страв */
+.dishes {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 32px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar.sidebar-collapsed ~ .main-content .dishes {
+  grid-template-columns: repeat(4, minmax(0,1fr));
+}
+
+@media (max-width: 900px) {
+  .dishes,
+  .sidebar.sidebar-collapsed ~ .main-content .dishes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .dishes,
+  .sidebar.sidebar-collapsed ~ .main-content .dishes {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Для екранів до 786px (планшети) */
+@media (max-width: 700px) {
+  .header {
+    padding: 10px 50px;
+    height: auto;
+  }
+  .logo {
+    margin: 0px;
+  }
+  .restaurant-details p {
+    text-align: center;
+  }
+  .header__row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .search-container {
+    justify-content: center; /* Центруємо поле пошуку */
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .dishes {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+  }
+
+  .dish-card {
+    height: 300px;
+    width: 320px;
+  }
+
+  .dish-card img {
+    height: 180px;
+  }
+
+  .dish-info {
+    padding: 10px;
+  }
+
+  .dish-info h3 {
+    font-size: 16px;
+  }
+
+  .dish-price {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+}
+
+/* Для екранів до 576px (маленькі планшети, великі телефони) */
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+
+  .search-container {
+    width: 100%;
+    justify-content: center;
+    padding-left: 0;
+  }
+  .section-title h2 {
+    margin-top: 60px;
+  }
+  .dishes {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    display: flex;
+    justify-content: center; /* Центруємо картки */
+    align-items: center;
+    flex-wrap: wrap; /* Щоб не ламався рядок */
+  }
+  .dish-card {
+    height: 300px;
+    width: 220px;
+  }
+  .dish-card img {
+    height: 180px;
+  }
+
+  .dish-info h3 {
+    font-size: 15px;
+  }
+
+  .dish-description {
+    font-size: 12px;
+  }
+}
+
+/* Для екранів до 480px (телефони) */
+@media (max-width: 700px) {
+  .navigation ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+    .dish-card-title {
+    font-size: 1.05rem !important;
+  }
+
+  .dishes {
+    grid-template-columns: 1fr; /* Одна колонка */
+    display: flex;
+    justify-content: center; /* Центруємо картки */
+    align-items: center;
+    flex-wrap: wrap; /* Щоб не ламався рядок */
+  }
+  .dish-card {
+    height: 10px !important;
+    width: 500px;
+    margin: 10px;
+  }
+  .dish-card img {
+    height: 250px;
+  }
+
+  .dish-info {
+    padding: 8px;
+  }
+
+  .dish-info h3 {
+    font-size: 14px;
+  }
+
+  .dish-description {
+    font-size: 12px;
+  }
+
+  .dish-price {
+    font-size: 13px;
+  }
+}
+
+/* Для екранів до 400px (дуже маленькі телефони) */
+@media (max-width: 700px) {
+  .header {
+    padding: 10px;
+  }
+  .navigation ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .search-container input {
+    width: 80%;
+  }
+  .section-title h2 {
+    margin-top: 80px;
+  }
+  .dishes {
+    grid-template-columns: 1fr; /* Одна колонка */
+  }
+
+  .dish-card {
+    height: 120px;
+    width: 500px;
+    margin: 10px;
+  }
+  .dish-card img {
+    height: 250px;
+  }
+
+  .dish-info {
+    padding: 5px;
+  }
+
+  .dish-info h3 {
+    font-size: 13px;
+  }
+
+  .dish-description {
+    font-size: 12px;
+  }
+
+  .dish-price {
+    font-size: 13px;
+  }
+}
+
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+}
+/* --- СТИЛІ ДЛЯ FLEX-КОНТЕЙНЕРА --- */
+.site-flex {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  align-items: stretch;
+  justify-content: flex-start;
+  position: relative;
+}
+
+/* --- СТИЛІ ДЛЯ SIDEBAR --- */
+.sidebar {
+  position: fixed;
+  left: 340px;
+  top: 110px;
+  width: 270px !important;
+  min-height: calc(100vh - 110px);
+  height: calc(100vh - 110px);
+  background: #111111 !important;
+  color: #fff;
+  padding: 2px 24px 24px 24px;
+  box-shadow: 2px 0 16px rgba(0,0,0,0.13);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: transform 0.3s;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    top: 0; /* На мобільних меню займає всю висоту */
+    min-height: 100vh;
+    height: 100vh;
+    left: 0 !important;
+  }
+  .main-nav {
+    position: relative;
+    top: unset;
+    left: unset;
+  }
+}
+@media (max-width: 700px) {
+  .site-flex {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+  .sidebar {
+    position: static !important;
+    width: 100vw !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    left: 0 !important;
+    top: 0 !important;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0 0 12px 0;
+    align-items: stretch;
+    z-index: 1000;
+    height: auto !important;
+    min-height: unset !important;
+    background: #2d3a4a;
+    border-right: none;
+    border-bottom: 2px solid #23272f;
+  }
+  .sidebar-menu ul,
+  .sidebar-menu {
+    width: 100vw !important;
+    min-width: 0;
+    max-width: 100vw;
+    padding: 0 0 0 0;
+    margin: 0;
+    border-radius: 0;
+  }
+  .sidebar-menu h3 {
+    text-align: center;
+    width: 100vw;
+    margin: 0;
+    padding: 16px 0 8px 0;
+    font-size: 1.2em;
+  }
+  .sidebar-menu li,
+  .sidebar-menu a {
+    width: 100vw;
+    box-sizing: border-box;
+    padding-left: 18px;
+    padding-right: 18px;
+    border-radius: 0;
+  }
+  .sidebar-has-submenu > a {
+    border-bottom: 1px solid #23272f;
+    width: 100vw;
+    padding: 12px 18px;
+  }
+  .sidebar-submenu {
+    background: #223044;
+    width: 100vw;
+    border-radius: 0;
+    margin: 0;
+    padding: 0 0 0 0;
+  }
+  .sidebar-submenu li a {
+    padding: 10px 28px;
+    width: 100vw;
+    border-radius: 0;
+  }
+}
+
+/* --- КНОПКА ЗГОРТАННЯ SIDEBAR --- */
+.sidebar-toggle {
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  width: 48px;
+  height: 48px;
+  background: #223044;
+  color: #a6c1ee;
+  border: none;
+  border-radius: 50%;
+  font-size: 2.2em;
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+.sidebar-toggle svg {
+  display: block;
+  margin: auto;
+  color: #a6c1ee;
+  transition: color 0.2s;
+}
+.sidebar-toggle:hover {
+  background: #a6c1ee;
+  color: #223044;
+}
+.sidebar-toggle:hover svg {
+  color: #223044;
+}
+
+/* --- СТАН ЗГОРНУТОГО SIDEBAR --- */
+.sidebar.sidebar-collapsed {
+  width: 56px;
+  min-width: 56px;
+  padding-left: 0;
+  padding-right: 0;
+  align-items: flex-start;
+}
+.sidebar.sidebar-collapsed .sidebar-header,
+.sidebar.sidebar-collapsed .sidebar-menu,
+.sidebar.sidebar-collapsed .sidebar-links {
+  display: none;
+}
+
+/* --- MAIN CONTENT ЗМІЩЕННЯ --- */
+.sidebar.sidebar-collapsed ~ .main-content {
+  margin-left: 56px;
+  transition: margin-left 0.3s;
+}
+
+/* --- Плавний перехід --- */
+.sidebar, .main-content {
+  transition: margin-left 0.3s, width 0.3s;
+}
+
+/* --- DISHES GRID --- */
+.dishes-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #23272f !important;
+  box-shadow: 0 2px 16px rgba(191,161,106,0.10);
+  overflow: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+
+/* --- MAIN CONTENT: фіксована ширина та відступ зверху --- */
+.main-content {
+  flex: 1 1 0%;
+  margin-left: 670px !important;
+  margin-right: 588px !important; /* Додаємо відступ справа під right-sidebar */
+  max-width: calc(100vw - 200px - 320px); /* Підлаштовуємо під нову ширину */
+  min-width: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 0; /* Повертаємо до початку, бо вже є padding-top у .container */
+  
+}
+section {
+  scroll-margin-top: 60px; /* для scrollIntoView, якщо все ж будеш його використовувати */
+}
+
+/* При згортанні меню не рухати блюда, просто збільшуємо margin-left */
+.sidebar.sidebar-collapsed ~ .main-content {
+  margin-left: 56px;
+  max-width: calc(100vw - 56px);
+}
+
+/* Відступ зверху для .main-content, щоб не заїжджало на меню/хедер */
+@media (min-width: 0px) {
+  .main-content {
+    padding-top: 120px;
+  }
+}
+
+/* Для мобільних: меню зверху, контент під ним */
+@media (max-width: 900px) {
+  .main-content {
+    margin-left: 0;
+    max-width: 100vw;
+    padding-top: 120px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* --- MAIN-NAV styles (copied from style.css for navigation consistency) --- */
+.main-nav {
+  display: flex;
+  align-items: center;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: none;
+  z-index: 1001;
+  background: #111111;
+  border-bottom: 1.5px solid #333333;
+  padding: 0 0 8px 0;
+  min-height: 112px !important;
+  height: 112px !important;
+  justify-content: flex-start;
+  position: relative;
+}
+.main-nav-left {
+  display: flex;
+  align-items: center;
+  margin-left: 96px;
+}
+.main-nav-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 0%;
+  min-width: 0;
+  gap: 80px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.main-nav-search {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 48px;
+  top: 0;
+  height: 100%;
+  margin-left: 0;
+  margin-top: 0;
+  width: auto;
+  justify-content: flex-end;
+  z-index: 3;
+}
+
+@media (max-width: 1200px) {
+  .main-nav-center {
+    gap: 32px;
+  }
+  .main-nav-search {
+    right: 12px;
+  }
+}
+@media (max-width: 900px) {
+  .main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    min-height: unset;
+    padding: 12px 0 8px 0;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1001;
+  }
+  .container {
+    padding-top: 0 !important;
+  }
+  .sidebar {
+    top: 0;
+  }
+  .main-nav-left {
+    margin-left: 0;
+  }
+  .main-nav-center {
+    position: static;
+    transform: none;
+    width: 100%;
+    justify-content: center;
+    gap: 24px;
+    margin: 0 auto;
+  }
+  .main-nav-search {
+    position: static;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 16px;
+    justify-content: flex-start;
+  }
+}
+.main-nav-link {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', 'Verdana', 'Arial', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 8px;
+  border-radius: 6px;
+  background: transparent;
+
+  
+  display: inline-block;
+  position: relative;
+}
+.main-nav-link:hover,
+.main-nav-link:focus {
+
+  color: #bbbbbb;
+}
+
+.main-nav-title-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 245px;
+}
+.main-nav-title {
+  font-size: 1.7rem !important;
+  font-weight: bold;
+  color: #ebebeb !important;
+  letter-spacing: 1px;
+  vertical-align: middle;
+  font-family: Arial, sans-serif;
+  text-shadow: none;
+}
+.main-nav-subtitle {
+  font-size: 0.8rem;
+  color: #838383;
+  letter-spacing: 1.5px;
+  font-family: Arial, sans-serif;
+  margin-top: 1px;
+  font-weight: 500;
+}
+.main-nav-title {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #3a5a8c;
+  letter-spacing: 1px;
+  vertical-align: middle;
+  margin-right: 32px;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  text-shadow: 0 2px 8px rgba(58,90,140,0.08);
+}
+.main-nav .logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+/* Центрування навігації */
+.main-nav {
+  justify-content: flex-start;
+}
+@media (min-width: 700px) {
+  .main-nav {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 700px) {
+  .main-nav {
+    gap: 48px;
+  }
+}
+
+/* Центруємо тільки навігаційні посилання */
+@media (min-width: 700px) {
+  .main-nav {
+    position: relative;
+  }
+}
+
+.center-menu-btn-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+.center-menu-btn {
+  background: #7b4b27;
+  color: #fff;
+  border: none;
+  border-radius: 32px;
+  padding: 18px 56px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s, color 0.2s;
+  letter-spacing: 1px;
+  margin: 0 auto;
+  display: inline-block;
+}
+.center-menu-btn:hover {
+  background: #a88c6b;
+  color: #fff7ed;
+}
+.sidebar-menu {
+  width: 100%;
+  margin-top: 24px;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+.sidebar-menu h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #9c9c9c !important;
+  margin-bottom: 4px;
+  text-transform: none;
+  text-align: left;
+  letter-spacing: 0.1px;
+  
+}
+.sidebar-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1px 0;
+}
+.sidebar-menu ul li {
+  margin-bottom: 8px;
+  position: relative;
+}
+.sidebar-menu ul li a,
+.sidebar-links a,
+.sidebar-submenu li a {
+  padding-left: 1px !important;
+  text-decoration: none !important;
+} 
+
+
+.sidebar-menu ul li a {
+  font-size: 1rem;
+  font-weight: 510 !important;
+  color: #fff;
+  background: transparent;
+  letter-spacing: 0.1px;
+  line-height: 1.1;
+  padding: 8px 18px 8px 12px;
+  border-radius: 8px;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  display: block;
+  margin-bottom: 2px;
+  
+  text-decoration: none !important;
+}
+.sidebar-menu ul li a:hover, .sidebar-menu ul li a:focus {
+  background: none !important;
+  color: #6e6e6e !important;
+
+  text-shadow: none;
+}
+.sidebar-menu ul li.active > a,
+.sidebar-menu ul li a.active {
+  background: #23272f !important;
+  color: #a8a8a8 !important;
+  font-weight: 900;
+  
+}
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 28px;
+}
+.sidebar-links a {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.7px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.18s, color 0.18s;
+  display: block;
+  margin-bottom: 8px;
+  text-shadow: 0 1px 6px rgb(252, 249, 249);  
+}
+.sidebar-links a:hover, .sidebar-links a:focus {
+  background: #ffffff;
+  color: #181818 !important;
+  text-shadow: none;
+}
+.sidebar-submenu {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border-radius: 0;
+  margin-left: 50px; /* або будь-який інший */
+  padding-left: 0;
+  box-shadow: none;
+  position: static;
+}
+.sidebar-submenu {
+  margin-left: 40px !important;
+}
+.sidebar-has-submenu.open > .sidebar-submenu {
+  display: flex;
+}
+.sidebar-has-submenu.open > .sidebar-submenu-toggle .submenu-arrow {
+  transform: rotate(180deg);
+}
+.sidebar-submenu li {
+  margin-bottom: 1px;
+}
+.sidebar-submenu li a {
+  font-size: 1rem !important;
+  color: #fff;
+  padding: 5px 9px 4px 0px !important; /* Більший лівий відступ */
+  margin-left: -16px !important;
+  border-radius: 8px;
+  background: none;
+  font-weight: 10 !important;
+  transition: background 0.18s, color 0.18s;
+  display: block;
+  text-decoration: none !important;
+}
+.sidebar-submenu li a:hover, .sidebar-submenu li a:focus {
+  background: none;
+  color: #fff;
+  filter: brightness(1.35);
+}
+.sidebar-submenu li.active > a,
+.sidebar-submenu li a.active {
+  background: none !important;
+  color: #ffe066 !important; /* Яскравий жовтий для активного */
+  font-weight: 700;
+  filter: none;
+}
+
+.sidebar-links a {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #fff;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  text-transform: none;
+}
+
+/* Відступи між секціями */
+.sidebar-menu ul li:not(:last-child) {
+  margin-bottom: 1px;
+}
+
+/* --- Кінець оновлених стилів меню --- */
+.submenu-arrow {
+  display: inline-block;
+  font-size: 1em;
+  margin-right: 8px;
+  margin-left: 0;
+  transition: transform 0.2s;
+  transform: rotate(0deg);
+}
+
+/* --- СТИЛІ ДЛЯ КАРТОК СТРАВ --- */
+.dish-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: #18191c;
+  color: #fff;
+
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+  padding: 28px 32px;
+  margin-bottom: 32px;
+  position: relative;
+  min-height: 160px;
+  transition: box-shadow 0.2s;
+}
+.dish-card-info {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.2em;
+  margin-right: auto;
+  order: 1;
+  padding-top: 0;
+  padding-left: 0;
+}
+.dish-card-title {
+  font-size: 1.25rem !important;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  text-align: left;
+  width: 100%;
+  margin-top: 0;
+}
+.dish-card-price {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #21aaaf !important; /* Приємний зелений, можна змінити на інший відтінок за бажанням */
+  margin-bottom: 0.3em;
+  line-height: 1.1;
+  text-align: left;
+  width: 100%;
+}
+.dish-card-weight {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  margin-bottom: 0;
+  line-height: 1.1;
+  text-align: left;
+  width: 100%;
+}
+.dish-card-weight-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  margin-bottom: 0;
+}
+.dish-card-weight-icon {
+  width: 15px;
+  height: 20px; /* Було 15px, стало на 3px вище */
+  object-fit: contain;
+  margin-right: 0.2em;
+  filter: grayscale(1) brightness(0.6) contrast(1.1) !important;
+  vertical-align: middle;
+}
+.dish-card-img {
+  width: 160px !important;
+  height: 120px !important;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  background: #23272f;
+  display: block;
+  margin-left: 32px;
+  margin-right: 0;
+  flex-shrink: 0;
+  order: 2;
+  padding-right: 0;
+}
+@media (max-width: 900px) {
+  .dish-card-img {
+    width: 160px;
+    height: 140px;
+    margin-left: 20px;
+  }
+  .dish-card {
+    padding: 18px 10px;
+  }
+  .dish-card-info {
+    padding-left: 0;
+  }
+  .dish-card-img {
+    padding-right: 0;
+  }
+}
+@media (max-width: 700px) {
+  .dish-card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .dish-card-info {
+    order: 1;
+  }
+  .dish-card-img {
+    order: 2;
+    margin-left: 16px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 700px) {
+  .dish-card {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 8px;
+  }
+  .dish-card-info {
+    gap: 6px;
+    padding-left: 0;
+  }
+  .dish-card-img {
+  width: 115px !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+    margin-left: 12px;
+    padding-right: 0;
+  }
+}
+
+/* --- Оновлені стилі для карток страв у спільному блоці .dishes-grid --- */
+.dishes-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #111111 !important;
+  box-shadow: 0 2px 16px rgba(191,161,106,0.10);
+  overflow: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.dish-card {
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  margin-bottom: 0;
+  border-bottom: 1.5px dashed #bfa16a !important;
+  padding: 28px 32px;
+  min-height: 160px;
+  transition: box-shadow 0.2s;
+}
+.dish-card:last-child {
+  border-bottom: none;
+}
+
+/* --- ПРАВА ІНФОПАНЕЛЬ --- */
+.right-sidebar {
+  position: fixed;
+  right: 350px;
+  top: 110px;
+  width: 270px;
+  min-height: calc(100vh - 110px);
+  height: calc(100vh - 110px);
+  background: #111111; 
+  color: #fff;
+  padding: 32px 24px 24px 24px;
+  box-shadow: -2px 0 16px rgba(0,0,0,0.13);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: transform 0.3s;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border-radius: 0 18px 18px 0;
+  border-left: 2px solid #353434;
+}
+.right-sidebar .info-block {
+  background: none;
+  border-radius: 12px;
+  padding: 9px 0 14px 0;
+  margin-bottom: 0px;
+  width: 100%;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  text-align: left;
+}
+.right-sidebar .info-block .info-label {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.05rem;
+  margin-bottom: 2px;
+  font-weight: 600;
+  text-align: left;
+  background: none;
+  padding: 0;
+}
+.right-sidebar .info-block .info-label span,
+.right-sidebar .info-block .info-label img {
+  flex-shrink: 0;
+}
+@media (max-width: 1200px) {
+  .right-sidebar {
+    display: none;
+  }
+}
+@media (max-width: 1300px) {
+  .main-content {
+    margin-right: 0;
+    max-width: 100vw;
+  }
+  .right-sidebar {
+    display: none;
+  }
+}
+
+/* --- СТИЛІ ДЛЯ СУЦІЛЬНОГО БЛОКУ МЕНЮ З КАТЕГОРІЯМИ (БЕЖЕВА ПАЛІТРА) --- */
+.menu-section {
+  margin-bottom: 0;
+  border-radius: 0;
+  overflow: visible;
+  background: none;
+  padding: 0;
+}
+.menu-section-title {
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: #333333; /* Темно-коричневий */
+  background: #fff8f0; /* Бежевий */
+  border-radius: 0;
+  margin: 0;
+  padding: 22px 30px 12px 32px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  box-shadow: none;
+  border-top: 2px solid #bfa16a;
+  border-bottom: 2px solid #bfa16a;
+  text-align: center;
+}
+.menu-section .dishes-grid {
+  border-radius: 0;
+  box-shadow: none;
+  margin-top: 0;
+}
+.menu-section + .menu-section {
+  margin-top: 0;
+}
+.dishes-grid {
+  background: #111111 !important;
+
+  box-shadow: 0 2px 16px rgba(191,161,106,0.10);
+}
+.dish-card {
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  margin-bottom: 0;
+  border-bottom: 1.5px dashed #bfa16a;
+  padding: 28px 32px;
+  min-height: 160px;
+  transition: box-shadow 0.2s;
+}
+.dish-card:last-child {
+  border-bottom: none;
+}
+.dish-card-info {
+  color: #333333;
+}
+.dish-card-title {
+  color: #333333;
+}
+.dish-card-price {
+  color: #ffffff !important; /* Приємний зелений, можна змінити на інший відтінок за бажанням */
+}
+.dish-card-weight {
+  color: #a89c8a;
+}
+.dish-card-weight-icon {
+  filter: brightness(0.8) sepia(1) hue-rotate(-20deg) saturate(2);
+}
+.dish-card-img {
+  background: #f7f2ec;
+  box-shadow: 0 2px 8px rgba(191,161,106,0.10);
+}
+/* Кнопка лайку (якщо є) */
+
+/* Адаптуємо тіні, бордери, ховери */
+.menu-section-title, .dishes-grid, .dish-card-img {
+  box-shadow: 0 2px 8px rgba(191,161,106,0.10);
+}
+.main-content {
+  padding: 0;
+}
+.dishes-grid {
+  border-radius: 0;
+  padding: 0;
+}
+.menu-section-title {
+  padding-left: 0;
+  padding-right: 0;
+}
+.dish-card {
+  padding: 28px 32px;
+  margin: 0;
+  width: 100%;
+}
+/* --- ПАТЧ ДЛЯ ПРИЛИПАННЯ БЛЮД ДО ОБОХ ПАНЕЛЕЙ --- */
+.main-content {
+  margin-left: 660px !important; /* ширина лівої панелі */
+  margin-right: 670px !important;  /* ширина правої панелі */
+  max-width: calc(100vw - 370px - 320px);
+  width: auto;
+  box-sizing: border-box;
+  padding: 0;
+  padding-top: 120px; /* Відступ зверху, щоб не заходило під навігацію */
+}
+
+#menu-sections, .dishes-grid {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.dish-card {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+
+  box-sizing: border-box;
+  /* Повертаємо padding як було */
+  padding: 28px 32px;
+}
+
+.dish-card-info {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.2em;
+  margin-right: auto;
+  order: 1;
+  padding-top: 0;
+  padding-left: 0; /* Повертаємо як було */
+}
+.dish-card-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  background: #111111;
+  display: block;
+  margin-left: 32px;
+  margin-right: 0;
+  flex-shrink: 0;
+  order: 2;
+  padding-right: 0; /* Повертаємо як було */
+}
+.dish-card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  text-align: left;
+  width: 100%;
+  margin-top: 0; /* Повертаємо як було */
+}
+@media (max-width: 1200px) {
+  .main-content {
+    margin-right: 0;
+    max-width: 100vw;
+    padding-top: 120px;
+  }
+  .right-sidebar {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .main-content {
+    margin-left: 0;
+    max-width: 100vw;
+    padding: 0;
+    padding-top: 120px;
+  }
+  .dish-card {
+    border-radius: 0px;
+    padding: 18px 10px;
+  }
+  .dish-card-info {
+    padding-left: 0;
+  }
+  .dish-card-img {
+    padding-right: 0;
+  }
+}
+@media (max-width: 700px) {
+  .dish-card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .dish-card-info {
+    order: 1;
+  }
+  .dish-card-img {
+    order: 2;
+    margin-left: 16px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 700px) {
+  .dish-card-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .dish-card-title {
+    order: 0;
+  }
+  .dish-card-price {
+    order: 1;
+    margin-bottom: 2px;
+  }
+  .dish-card-weight,
+  .dish-card-weight-row {
+    order: 2;
+    margin-top: -105px !important;
+    margin-bottom: 0;
+    align-items: flex-start;
+    display: flex;
+  }
+  .dish-card-weight-row {
+    align-items: center !important;
+    gap: 4px !important;
+    display: flex !important;
+  }
+  .dish-card-weight-icon {
+    margin-right: 4px !important;
+    margin-bottom: 0 !important;
+    vertical-align: middle !important;
+    align-self: center !important;
+    
+  }
+  .dish-card-weight {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+}
+
+/* --- Темна тема для меню, інструкції та списку блюд --- */
+
+/* Меню (sidebar) */
+.sidebar {
+  background: #111111;
+  color: #e0e6ed;
+}
+.sidebar-menu h3,
+.sidebar-menu ul li a,
+.sidebar-links a {
+  color: #e0e6ed;
+}
+.sidebar-menu ul li a:hover, .sidebar-menu ul li a:focus {
+  background: #111111;
+  color: #ffffff !important;
+}
+.sidebar-menu ul li.active > a,
+.sidebar-menu ul li a.active {
+  background: #111111 !important;
+  color: #ffffff !important;
+}
+.sidebar-links a:hover, .sidebar-links a:focus {
+  background: #8a8a8a;
+  color: #181c23 !important;
+}
+
+/* Інструкція/права панель */
+.right-sidebar {
+  background: #111111;
+  color: #e0e6ed;
+}
+.right-sidebar .info-block {
+  background: #111111;
+  color: #e0e6ed;
+}
+.right-sidebar .info-block .info-label {
+  color: #b0b0b0;
+}
+.right-sidebar .info-block .info-value {
+  color: #ffffff;
+  padding-left: 12px;
+}
+
+/* Список блюд (dishes-grid, dish-card) */
+.dishes-grid {
+  background: #111111;
+}
+.dish-card {
+  background: #111111;
+  color: #181c23;
+  border-bottom: 1.5px dashed #333333 !important;
+}
+.dish-card-info {
+  color: #e0e6ed;
+}
+.dish-card-title {
+  color: #ffe066;
+}
+.dish-card-price {
+  color: #d3d2d2 !important; /* Приємний зелений, можна змінити на інший відтінок за бажанням */
+  font-weight: 300 !;
+}
+.dish-card-weight {
+  color: #b0b0b0;
+}
+.dish-card-img {
+  background: #23272f;
+}
+.menu-section-title {
+  background: #111111;
+  color: #ffe066;
+  border-top: 2px solid #333333 !important;
+  border-bottom: 2px solid #333333 !important;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+  position: absolute;
+  z-index: 9999;
+}
+.no-results {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 40px;
+  color: #888;
+}
+
+/* Повідомлення про відсутність результатів пошуку */
+.no-dish-found-msg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #111111;
+  border: 1px solid #23282f;
+
+  padding: 32px 16px 24px 16px;
+
+
+  width: 556px;
+  max-width: 650px !important;
+}
+.no-dish-found-msg-title {
+  font-size: 2em;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+.no-dish-found-msg-icon {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.no-dish-found-msg-text {
+  font-size: 1.3em;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+.no-dish-found-msg-text i {
+  color: #ffffff;
+}
+.no-dish-found-msg-btn {
+  padding: 8px 18px;
+  font-size: 1em;
+  border-radius: 8px;
+  background: #111111;
+  color: #ffffff;
+  border: 1px solid #23282f;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.no-dish-found-msg-btn:hover {
+  background: #23282f;
+}
+
+/* --- ГЛОБАЛЬНО: Білий текст для всіх основних темних блоків --- */
+body,
+.sidebar,
+.right-sidebar,
+.dishes-grid,
+.dish-card,
+.dish-card-info,
+.menu-section-title,
+.dish-card-title {
+  color: #fff !important;
+}
+.info-img-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  margin-left: 12px;
+  vertical-align: middle;
+  object-fit: contain;
+  display: inline-block;
+}
+.right-sidebar .info-map {
+  margin-top: 2px;
+  margin-left: 12px;
+}
+.right-sidebar iframe {
+  width: 100%;
+  width: 250px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+/* --- МОДАЛЬНЕ ВІКНО ДЛЯ ЗОБРАЖЕНЬ СТРАВ --- */
+.img-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+.img-modal.open {
+  display: flex;
+}
+.img-modal-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px #000b;
+  background: #fff;
+}
+.img-modal-close {
+  position: absolute;
+  top: 32px;
+  right: 48px;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10000;
+  background: none;
+  border: none;
+}
+@media (max-width: 700px) {
+  html, body, .sidebar, .sidebar-menu, .sidebar-menu ul, .sidebar-menu li, .sidebar-menu a, .sidebar-has-submenu > a, .sidebar-submenu, .sidebar-submenu li a {
+    overflow-y: hidden !important;
+    scrollbar-width: none !important;
+  }
+  .sidebar::-webkit-scrollbar,
+  .sidebar-menu::-webkit-scrollbar,
+  .sidebar-menu ul::-webkit-scrollbar,
+  .sidebar-menu li::-webkit-scrollbar,
+  .sidebar-menu a::-webkit-scrollbar,
+  .sidebar-has-submenu > a::-webkit-scrollbar,
+  .sidebar-submenu::-webkit-scrollbar,
+  .sidebar-submenu li a::-webkit-scrollbar {
+    width: 0 !important;
+    background: transparent !important;
+    display: none !important;
+  }
+  .dish-card {
+    height: 130px !important;
+    min-height: 130px !important;
+    max-height: 130px !important;
+    overflow: hidden;
+  background: #111111 !important;
+}
+}
+@media (max-width: 700px) {
+  .dish-card-title {
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    margin-bottom: 0.5em !important;
+    line-height: 1.2 !important;
+    text-align: left !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
+  .dish-card-price {
+    font-size: 0.7rem !important;
+    font-weight: 300 !important;
+    color: #ffffff !important;
+    line-height: 1.1 !important;
+    text-align: left !important;
+    width: 100% !important;
+  }
+  .dish-card-weight-icon {
+  margin-top: -2px !important;
+  }
+  .dish-card-weight {
+    font-size: 0.7rem !important;
+    color: #b0b0b0 !important;
+    line-height: 1.1 !important;
+    text-align: left !important;
+    width: 100% !important;
+  }
+  .menu-section-title {
+    font-size: 1.5rem !important;
+  background: #111111 !important;
+  color: #ffffff !important;
+  border-top: 2px solid #333333 !important;
+  border-bottom: 2px solid #333333 !important;
+}
+}
+
+/* --- Навігація під назвою сайту для ПК --- */
+@media (min-width: 900px) {
+  .main-nav-left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-nav-logo-title {
+    margin-top: 22px;
+    margin-left: 243px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .main-nav-title-block {
+    margin-left: 18px;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .main-nav-links-under {
+    flex-direction: row;
+    margin-top: 12px;
+    margin-left: 240px;
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+
+/* Для мобільних — ховаємо нову навігацію */
+@media (max-width: 900px) {
+  .main-nav-links-under {
+    display: none;
+  }
+}
+.sidebar-submenu li a {
+  font-size: 0.9rem !important; /* або будь-який потрібний розмір */
+}
+/* --- Трикутник для активного підпункту sidebar (зліва) --- */
+.sidebar-link.active {
+  position: relative;
+  color: #d2691e !important;
+  font-weight: bold;
+}
+.sidebar-link.active::before {
+  content: '\25C0'; /* ► або '\25C0' для ◀ */
+  position: absolute;
+  left: -21px;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg); /* Повертаємо вправо ►, або забрати rotate для ◀ */
+  color: #999999;
+  font-size: 0.6em; /* Зменшено розмір трикутника */
+}
+@media (max-width: 700px) {
+  body {
+    background: #111111 !important; /* або url('шлях_до_зображення.jpg') center/cover no-repeat !important; */
+  }
+}

@@ -1,0 +1,969 @@
+/* style.css */
+html,
+body {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #eaddd3;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background-image: url("");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container,
+.main-nav,
+.header,
+.content {
+  width: 100% !important;
+  max-width: 100vw !important;
+  box-sizing: border-box;
+}
+
+body > .container:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* -----------Хедер --------------------*/
+.header {
+  /* background-color: #796254; */
+  background: transparent;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("Background.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.95;
+
+  z-index: 1;
+  box-shadow: none; /* прибираємо підсвітку по краях */
+}
+
+.header-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 3;
+  width: 100%;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header-title .logo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: 0 0 18px 0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+.header-title h1 {
+  font-size: 64px;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 3px;
+}
+.header-title p {
+  font-size: 28px;
+  margin: 10px 0 0 0;
+  letter-spacing: 2px;
+}
+
+/* Інформація про ресторан */
+.restaurant-info {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85) !important;
+  padding: 20px;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  border-radius: 20px;
+  box-shadow: none;
+  transform: none;
+  margin-bottom: 0;
+}
+
+@media (min-width: 1000px) {
+  .restaurant-info {
+    max-width: 1200px;
+    width: 95%;
+  }
+}
+/* Загальний стиль для навігаційного меню */
+.navigation {
+  background-color: #111111 !important;
+  color: #ffffff;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navigation ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  position: relative;
+  margin: 0;
+  padding: 0 5px; /* Відступи між пунктами */
+  display: flex;
+  align-items: center;
+}
+
+/* Стилі посилань */
+.navigation a {
+  color: #966f54;
+  /* Колір тексту */
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.navigation a:hover {
+  color: #bfa16a;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.restaurant-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.restaurant-details h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.restaurant-details p {
+  margin: 5px 0 0;
+  color: gray;
+  font-size: 14px;
+}
+
+/* Основний контент */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 0;
+  padding: 0;
+  background: transparent !important;
+}
+
+/* Розділи меню */
+.menu-sections {
+  /* background: #181818; */
+  background: rgba(24, 24, 24, 0.85) !important;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+  padding: 30px 40px;
+  max-width: 900px;
+  margin: 30px auto;
+  color: #fff;
+}
+
+.menu-sections h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.menu-sections ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-dropdown {
+  border: 2px solid #c4b6ab;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.85) !important;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.menu-dropdown-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 14px 15px;
+  font-weight: bold;
+  font-size: 18px;
+  background: rgba(245, 237, 230, 0.85) !important;
+  transition: background 0.2s;
+}
+.menu-dropdown-header:hover {
+  background: rgba(234, 221, 211, 0.85) !important;
+}
+.menu-dropdown-header img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+.menu-dropdown-content {
+  display: none;
+  padding: 15px 20px 15px 65px;
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-top: 1px solid #eee;
+  animation: fadeIn 0.3s;
+}
+.menu-dropdown.open .menu-dropdown-content {
+  display: block;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* -----------Футер --------------------*/
+footer {
+  background: #000 !important;
+  color: #fff;
+  padding: 20px 10px;
+  font-family: Arial, sans-serif;
+  flex-shrink: 0;
+  position: relative !important;
+  z-index: 2;
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent !important;
+}
+
+.footer-section {
+  flex: 0 1 250px;
+  margin: 15px;
+  background: transparent !important;
+  max-width: 350px;
+}
+
+.footer-section h3 {
+  margin-bottom: 7px;
+  font-size: 18px;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline !important;
+}
+
+.footer-section table {
+  color: #fff;
+  font-size: 14px;
+  background: transparent !important;
+}
+
+.route-btn {
+  margin-top: 7px;
+  background-color: #2c2c2c;
+  border: none;
+  color: #fff;
+  padding: 7px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 15px;
+  padding-top: 8px;
+  text-align: center !important;
+  font-size: 14px;
+  background: transparent !important;
+}
+
+.footer-bottom .links {
+  margin-top: 3px;
+}
+
+.footer-bottom .links a {
+  color: #ccc;
+  margin: 0 8px;
+  font-size: 13px;
+}
+
+.footer-bottom .links a:hover {
+  color: #fff;
+}
+
+.footer-section.contact-info {
+  font-size: 18px;
+  background: transparent !important;
+}
+
+.footer-section.contact-info h3 {
+  font-size: 20px;
+}
+
+.footer-section.contact-info p,
+.footer-section.contact-info a {
+  font-size: 14px;
+}
+
+.insta {
+  display: flex;
+  align-items: center;
+  background: transparent !important;
+}
+
+.insta img {
+  margin-right: 8px;
+  height: 24px;
+  width: 24px;
+  border-radius: 6px;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.dishes {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 0;
+  max-width: 100%;
+  margin: 0 auto;
+  background: transparent !important;
+}
+
+.dish-card {
+  display: flex;
+  align-items: center;
+  background: rgba(35, 35, 35, 0.85) !important;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: left;
+  height: 140px;
+  width: 100%;
+  min-width: 0;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  flex: 1 1 100%;
+  border: 1px solid #292929;
+}
+.dish-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  border-color: #ffe6b0;
+}
+.dish-card img {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 24px 0 0;
+  flex-shrink: 0;
+  background: #111;
+}
+.dish-info {
+  padding: 0 0 0 0;
+  flex-grow: 1;
+  min-width: 0;
+  background: transparent !important;
+}
+.dish-info h3 {
+  margin: 0 0 6px 0;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+.dish-description,
+.dish-descriptiong {
+  font-size: 15px;
+  color: #ffe6b0;
+  margin: 2px 0 0 0;
+  background: transparent !important;
+}
+.dish-price {
+  font-size: 18px;
+  color: #ffe6b0;
+  font-weight: bold;
+  text-align: right;
+  margin: 0 18px 0 18px;
+  min-width: 80px;
+  background: transparent !important;
+}
+@media (max-width: 900px) {
+  .menu-sections {
+    padding: 10px 2vw;
+  }
+  .dish-card,
+  .dish-card img {
+    height: 90px;
+    width: 90px;
+  }
+  .dish-info h3 {
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 13px;
+  }
+  .header-title h1 {
+    font-size: 40px !important;
+  }
+  .header-title p {
+    font-size: 20px !important;
+  }
+  .header-title .logo {
+    width: 56px;
+    height: 56px;
+    margin: 0 0 10px 0 !important;
+  }
+  .restaurant-details h1 {
+    font-size: 22px;
+  }
+  .restaurant-info {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .logo {
+    width: 36px;
+    height: 36px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .dish-card {
+    height: 60px;
+    min-height: 60px;
+  }
+  .dish-card img {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+  }
+  .dish-info h3 {
+    font-size: 11px;
+  }
+  .dish-description,
+  .dish-descriptiong {
+    font-size: 10px;
+  }
+  .dish-price {
+    font-size: 11px;
+    min-width: 30px;
+    margin: 0 4px 0 0;
+  }
+  .main-nav {
+    flex-direction: column;
+    min-height: unset;
+    height: unset;
+    padding: 0 0 8px 0;
+    gap: 0;
+    align-items: flex-start;
+    border-radius: 0 0 12px 12px;
+  }
+  .main-nav-title-block {
+    margin: 0 auto 0 0;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+  .main-nav-title {
+    font-size: 1.8rem !important;
+    margin-right: 0;
+  }
+  .main-nav-subtitle {
+    font-size: 0.8rem !important;
+  }
+  .main-nav-center {
+    position: static;
+    left: unset;
+    top: unset;
+    transform: none;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    margin-top: 8px;
+    align-items: flex-start;
+  }
+  .header-bg {
+    background-size: cover !important;
+    background-position: center;
+  }
+}
+
+/* Знімаємо фіксацію навігації для index.html та about.html */
+body.index-main .main-nav,
+body.about-main .main-nav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 1001 !important;
+}
+
+.subsection {
+  margin-bottom: 30px;
+  border-radius: 10px;
+  background: rgba(34, 34, 34, 0.85) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #232323;
+}
+.subsection-header {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 18px 30px;
+  background: rgba(24, 24, 24, 0.85) !important;
+  color: #fff;
+  cursor: pointer;
+  border-bottom: 1px solid #232323;
+  transition: background 0.2s, color 0.2s;
+  user-select: none;
+  letter-spacing: 0.5px;
+}
+.subsection-header:hover {
+  background: rgba(35, 35, 35, 0.85) !important;
+  color: #ffe6b0;
+}
+.subsection-content {
+  padding: 20px 30px 25px 30px;
+  background: rgba(24, 24, 24, 0.85) !important;
+}
+
+/* Топбар */
+.topbar {
+  width: 100%;
+  height: 80px;
+  background: #b49a7a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-sizing: border-box;
+  border-bottom: 2.5px solid #6b7a5b;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 10;
+}
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: 96px; /* Збільшуємо відступ зліва */
+}
+.topbar-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+.topbar-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.topbar-title {
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.18);
+}
+.topbar-subtitle {
+  font-size: 1.1rem;
+  color: #f3e7d2;
+  letter-spacing: 1.5px;
+  margin-top: 2px;
+}
+.topbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.topbar-link {
+  color: #2d2216;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 4px 16px;
+  border-radius: 6px;
+  transition: background 0.18s, color 0.18s;
+  background: transparent;
+}
+.topbar-link:hover {
+  background: #6b7a5b;
+  color: #ffe6b0;
+}
+@media (max-width: 700px) {
+  .topbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 5vw;
+    gap: 10px;
+  }
+  .topbar-nav {
+    gap: 12px;
+  }
+  .topbar-logo {
+    width: 40px;
+    height: 40px;
+  }
+  .topbar-title {
+    font-size: 1.2rem;
+  }
+  .topbar-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+/* Основне меню навігації */
+.main-nav {
+  display: flex;
+  align-items: center;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: none;
+  z-index: 1001;
+  background: transparent;
+  padding: 0 0 8px 0;
+  min-height: 112px !important;
+  height: 112px !important;
+  justify-content: flex-start;
+  position: relative;
+}
+.main-nav-left {
+  display: flex;
+  align-items: center;
+  margin-left: 96px;
+}
+.main-nav-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 0%;
+  min-width: 0;
+  gap: 80px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.main-nav-link {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-family: "Montserrat", "Verdana", "Arial", sans-serif !important;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 8px;
+  border-radius: 6px;
+  background: transparent;
+  display: inline-block;
+  position: relative;
+}
+.main-nav-link:hover,
+.main-nav-link:focus {
+  color: #bbbbbb;
+}
+.main-nav-title-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 245px;
+}
+.main-nav-title {
+  font-size: 1.7rem !important;
+  font-weight: bold;
+  color: #ebebeb !important;
+  letter-spacing: 1px;
+  vertical-align: middle;
+  font-family: Arial, sans-serif;
+  text-shadow: none;
+}
+.main-nav-subtitle {
+  font-size: 0.8rem;
+  color: #838383;
+  letter-spacing: 1.5px;
+  font-family: Arial, sans-serif;
+  margin-top: 1px;
+  font-weight: 500;
+}
+.main-nav-title {
+  margin-top: 9px;
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #3a5a8c;
+  letter-spacing: 1px;
+  vertical-align: middle;
+  margin-right: 32px;
+  font-family: "Georgia", "Times New Roman", serif;
+  text-shadow: 0 2px 8px rgba(58, 90, 140, 0.08);
+}
+.main-nav .logo {
+  margin-top: 8px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+/* Центрування навігації */
+.main-nav {
+  justify-content: flex-start;
+}
+@media (min-width: 700px) {
+  .main-nav {
+    justify-content: flex-start;
+  }
+  @media (min-width: 600px) {
+    .main-nav {
+      gap: 48px;
+    }
+  }
+}
+
+/* Центруємо тільки навігаційні посилання */
+@media (min-width: 700px) {
+  .main-nav {
+    position: relative;
+  }
+}
+
+.center-menu-btn-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+.center-menu-btn {
+  background: #7b4b27;
+  color: #fff;
+  border: none;
+  border-radius: 32px;
+  padding: 18px 56px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s, color 0.2s;
+  letter-spacing: 1px;
+  margin: 0 auto;
+  display: inline-block;
+}
+.center-menu-btn:hover {
+  background: #a88c6b;
+  color: #fff7ed;
+}
+@media (max-width: 600px) {
+  .main-nav {
+    background: #f7f2ec !important;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 2px 8px rgba(168, 140, 107, 0.08);
+    border-bottom: 2.5px solid #a88c6b;
+    min-height: unset;
+    height: unset;
+    padding: 0 0 8px 0;
+    margin-bottom: 0;
+    align-items: flex-start;
+  }
+  .main-nav-left {
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+    display: flex;
+  }
+  .main-nav-title-block {
+    align-items: center !important;
+    text-align: center !important;
+    width: 100%;
+    margin: 0 auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .main-nav-center {
+    flex-direction: row !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-top: 15px !important;
+    gap: 12px !important;
+    padding: 0 12px 0 12px !important;
+    position: static !important;
+    left: unset !important;
+    top: unset !important;
+    transform: none !important;
+    height: auto !important;
+    min-width: 0 !important;
+    z-index: auto !important;
+  }
+  .main-nav .logo {
+    margin-right: 0 !important;
+    width: 50px;
+    height: 50px;
+  }
+  .main-nav-left {
+    margin-left: 0 !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    width: 100%;
+    display: flex !important;
+    padding: 8px 12px;
+  }
+  .main-nav-title-block {
+    margin-right: 0 !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    margin: 0 0 0 12px !important;
+    padding: 0 !important;
+  }
+  .main-nav-center {
+    padding-left: 0 !important;
+  }
+}
+@media (max-width: 700px) {
+  .footer .container {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .footer-section {
+    margin: 10px 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: unset !important;
+  }
+  .footer-bottom {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .footer-bottom .links {
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-top: 10px !important;
+  }
+  .footer-bottom .links a {
+    margin: 5px 0 !important;
+    display: block !important;
+  }
+}
+/* --- Навігація під назвою сайту для ПК --- */
+@media (min-width: 900px) {
+  .main-nav-left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-nav-logo-title {
+    margin-top: 22px;
+    margin-left: 243px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .main-nav-title-block {
+    margin-left: 18px;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .main-nav-links-under {
+    flex-direction: row;
+    margin-top: 12px;
+    margin-left: 240px;
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+
+/* Для мобільних — ховаємо нову навігацію */
+@media (max-width: 900px) {
+  .main-nav-links-under {
+    display: none;
+  }
+}
+
+/* --- Ефект зміни фону навігації при скролі (ПК) --- */
+@media (min-width: 900px) {
+  .main-nav.scrolled {
+    background: #111111 !important;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+    border-bottom: 2.5px solid #222;
+    transition: background 0.25s, box-shadow 0.25s;
+  }
+  .main-nav {
+    transition: background 0.25s, box-shadow 0.25s;
+  }
+}
+@media (max-width: 700px) {
+  .mobile-bottom-nav,
+  .mobile-bottom-nav a {
+    font-family: "Montserrat", Arial, sans-serif !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+  }
+}
