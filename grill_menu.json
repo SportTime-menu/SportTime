@@ -1,0 +1,374 @@
+[
+  {
+    "category": "Гриль меню",
+    "id": "gril",
+    "dishes": [
+      {
+        "name": "Шашлик зі свинини",
+        "weight": "150/50 г",
+        "price": "185 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Шашлик із телятини",
+        "weight": "150 г",
+        "price": "270 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Стегно куряче гриль",
+        "weight": "150/50 г",
+        "price": "165 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Ребра свинини",
+        "weight": "150/50 г",
+        "price": "155 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Люля-кебаб із курки",
+        "weight": "100 г",
+        "price": "135 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Люля-кебаб із телятини",
+        "weight": "100 г",
+        "price": "175 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Перепілка",
+        "weight": "1 шт.",
+        "price": "225 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Скумбрія гриль",
+        "weight": "100/50 г",
+        "price": "165 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Закуска з лаваша",
+        "weight": "100 г",
+        "price": "95 UAH",
+        "img": "food/блюдо.webp"
+      }
+    ]
+  },
+  {
+    "category": "М'ясні та рибні страви",
+    "id": "fish",
+    "dishes": [
+      {
+        "name": "Рулька свиняча запечена",
+        "weight": "100 г",
+        "price": "50 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Ребра яловичі запечені",
+        "weight": "1200 г",
+        "price": "1300 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Ребра свинячі запечені",
+        "weight": "1200 г",
+        "price": "1300 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Качка запечена з фруктами",
+        "weight": "100 г",
+        "price": "60 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Курка запечена з апельсинами",
+        "weight": "100 г",
+        "price": "55 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Риба фарширована щука / судак / короп",
+        "weight": "100 г",
+        "price": "65 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Класичний печінковий торт",
+        "weight": "100 г",
+        "price": "65 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Холодне з язика",
+        "weight": "250 г",
+        "price": "150 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Ковбаса домашня куряча / куряча з грибами / свиняча / яловича",
+        "weight": "100 г",
+        "price": "65 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Голубці фаршировані",
+        "weight": "200 г",
+        "price": "125 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Курячі рулетики з грибами та сиром",
+        "weight": "100 г",
+        "price": "175 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Міні-рулетики по-тайськи",
+        "weight": "500 г",
+        "price": "180 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Суфле з судака",
+        "weight": "130/70 г",
+        "price": "260 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Телятина Велінгтон",
+        "weight": "200 г",
+        "price": "320 UAH",
+        "img": "food/блюдо.webp"
+      }
+    ]
+  },
+  {
+    "category": "Гарніри",
+    "id": "garnir",
+    "dishes": [
+      {
+        "name": "Картопля Гратен із соусом \"Бешамель\"",
+        "weight": "100/50 г",
+        "price": "145 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Тушкована картопля з м'ясом",
+        "weight": "300 г",
+        "price": "125 UAH",
+        "img": "food/блюдо.webp"
+      }
+    ]
+  },
+  {
+    "category": "Закуски",
+    "id": "zakysk",
+    "dishes": [
+      {
+        "name": "Брускета з сьомгою",
+        "weight": "1 шт.",
+        "price": "65 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Брускета з оселедцем",
+        "weight": "1 шт.",
+        "price": "65 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Брускета з авокадо",
+        "weight": "1 шт.",
+        "price": "65 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Брускета з ростбіфом",
+        "weight": "1 шт.",
+        "price": "65 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Брускета з копченою качкою",
+        "weight": "1 шт.",
+        "price": "65 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Брускета з язиком",
+        "weight": "1 шт.",
+        "price": "65 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Брускета з крем-сиром та чері",
+        "weight": "1 шт.",
+        "price": "65 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Млинці з м'ясом",
+        "weight": "100/30 г",
+        "price": "55 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Млинці з грибами",
+        "weight": "100/30 г",
+        "price": "55 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Пиріжки листкові з м'ясом",
+        "weight": "1 шт.",
+        "price": "35 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Пиріжки листкові з капустою",
+        "weight": "1 шт.",
+        "price": "35 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Тарталетки з мусом із сьомги",
+        "weight": "1 шт.",
+        "price": "25 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Тарталетки з салатом",
+        "weight": "1 шт.",
+        "price": "25 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Моцарела в оболонці",
+        "weight": "1 шт.",
+        "price": "30 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Мус із сиром дор-блю з хамоном",
+        "weight": "1 шт.",
+        "price": "30 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Мус із авокадо з креветками",
+        "weight": "1 шт.",
+        "price": "35 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Канапе",
+        "weight": "1 шт.",
+        "price": "20 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Канапе",
+        "weight": "1 шт.",
+        "price": "20 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Канапе",
+        "weight": "1 шт.",
+        "price": "30 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Канапе",
+        "weight": "1 шт.",
+        "price": "25 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Сом на шпажках",
+        "weight": "1 шт.",
+        "price": "85 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Сьомга на шпажках",
+        "weight": "1 шт.",
+        "price": "125 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Шашлик курячий на шпажках",
+        "weight": "1 шт.",
+        "price": "60 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Шашлик свинячий на шпажках",
+        "weight": "1 шт.",
+        "price": "75 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Паштет у журавлинній оболонці",
+        "weight": "1 шт.",
+        "price": "35 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Сирний пиріг",
+        "weight": "1 шт.",
+        "price": "25 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Пампушки з часником",
+        "weight": "2 шт.",
+        "price": "10 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Асорті з паштетів",
+        "weight": "4 шт.",
+        "price": "160 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Кіш з куркою та броколі",
+        "weight": "1 шт.",
+        "price": "76 UAH",
+        "img": "food/блюдо.webp"
+      }
+    ]
+  },
+  {
+    "category": "Вареники",
+    "id": "varenu",
+    "dishes": [
+      {
+        "name": "Вареники з картоплею",
+        "weight": "200/30 г",
+        "price": "95 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Вареники з капустою",
+        "weight": "200/30 г",
+        "price": "95 UAH",
+        "img": "food/блюдо.webp"
+      },
+      {
+        "name": "Пельмені",
+        "weight": "200/30 г",
+        "price": "75 UAH",
+        "img": "food/блюдо.webp"
+      }
+    ]
+  }
+]
